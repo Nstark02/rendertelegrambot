@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
 # Telegram Bot Token
-TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')  # Ensure you have set this in your environment variables
+TELEGRAM_TOKEN = os.getenv('BOTSTOKEN')  # Ensure you have set this in your environment variables
 
 # Create the Telegram application
 application = Application.builder().token(TELEGRAM_TOKEN).build()
