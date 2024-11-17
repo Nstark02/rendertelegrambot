@@ -1,7 +1,6 @@
 from telegram import Update
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
-from flask import Flask, request
-import os
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
+import logging
 
 # Define your bot token (Replace with your actual token)
 TELEGRAM_API_TOKEN = os.getenv('BOTSTOKEN')
