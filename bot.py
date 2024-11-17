@@ -5,7 +5,7 @@ import os
 
 # Define your bot token (Replace with your actual token)
 TELEGRAM_API_TOKEN = os.getenv('BOTSTOKEN')
-WEBHOOK_URL = os.getenv('WEBHOOK_URL')
+#WEBHOOK_URL = os.getenv('WEBHOOK_URL')
 
 # Initialize Flask
 app = Flask(__name__)
@@ -21,12 +21,12 @@ def echo(update: Update, context: CallbackContext) -> None:
 
 # Flask route for the webhook
 @app.route('/' + TELEGRAM_API_TOKEN, methods=['POST'])
-def webhook():
-    """Handle webhook requests from Telegram."""
-    json_str = request.get_json(force=True)
-    update = Update.de_json(json_str, updater.bot)
-    updater.dispatcher.process_update(update)
-    return 'ok'
+#def webhook():
+#    """Handle webhook requests from Telegram."""
+#    json_str = request.get_json(force=True)
+#    update = Update.de_json(json_str, updater.bot)
+#    updater.dispatcher.process_update(update)
+#    return 'ok'
 
 def main():
     """Start the Flask app and set webhook."""
